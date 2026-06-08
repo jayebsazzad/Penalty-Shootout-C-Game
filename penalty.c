@@ -2,21 +2,21 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <time.h>
-void coinToss();
-void teamSelection();
-void shotMechanism();
-void saveMechanism();
-void shotMechanism2();
-void saveMechanism2();
-void match1();
-void match2();
-int scoreboard1=0;
-int scoreboard2=0;
-int remainingShots1= 5;
-int remainingShots2= 5;
-void determineWinner();
-void suddenDeath();
-void scoreReset();
+void coinToss(); // Function to simulate a coin toss
+void teamSelection(); // Function to allow the user to select their team
+void shotMechanism();  // Function to handle the shooting mechanism for the user's team before sudden death
+void saveMechanism(); // Function to handle the saving mechanism for the user's team before sudden death
+void shotMechanism2(); // Function to handle the shooting mechanism for the user's team during sudden death
+void saveMechanism2(); // Function to handle the saving mechanism for the user's team during sudden death
+void match1(); // Function to handle the match flow when the user shoots first
+void match2(); // Function to handle the match flow when opponent shoots first
+int scoreboard1=0; // global variable to track PSG's score
+int scoreboard2=0; // global variable to track Arsenal's score
+int remainingShots1= 5; // global variable to track remaining shots for PSG
+int remainingShots2= 5; // global variable to track remaining shots for Arsenal
+void determineWinner(); // Function to determine and announce the winner of the shootout
+void suddenDeath(); // Function to handle sudden death rounds if the match is tied after 5 shots each
+void scoreReset(); // Function to reset scores and remaining shots for a new game
 
 int main(){
     printf("===============================\n");
@@ -36,7 +36,7 @@ int main(){
     int num=0;
     scanf("%d",&num);
     
-    while(num==1){
+    while(num==1){  // Loop for replaying the game
     scoreReset();
     printf("===============================\n");
     printf("PSG VS ARSENAL PENALTY SHOOTOUT\n");
