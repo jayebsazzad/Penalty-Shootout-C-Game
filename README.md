@@ -1,1 +1,1 @@
-# Penalty-Shootout-C-Game
+This is a text based penalty shootout game between PSG and Arsenal where you have to enter an input to shoot or save a penalty. This game only runs on terminal. Follow the in-game instructions and you will understand how to play it. Note: If you're running this code on MAC/LINUX , then change the <windows.h> header file to <unistd.h> and then replace the Sleep function with sleep and input the number of seconds you want the delay to be ( in windows, it is to be given in milliseconds).
